@@ -1,0 +1,128 @@
+@use '../utils/variables' as *;
+
+.section-nineth {
+  position: relative;
+  padding: 80px 0;
+  background-color: $color-dark-blue;
+  color: $color-white;
+
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url('/src/assets/section-nineth/mobile-section-background.svg');
+  background-repeat: no-repeat;
+  background-position: 0px -70px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+    // z-index: -1;
+  }
+
+  @include tablet {
+    padding: 140px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 20px;
+    }
+
+    @include desktop-sm {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 0 32px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+
+    @include desktop-sm {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+
+    text-align: center;
+
+    @include desktop-sm {
+      text-align: left;
+    }
+
+    button {
+      @include tablet {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0%;
+      }
+
+      @include desktop-sm {
+        letter-spacing: -2%;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include desktop-sm {
+      font-size: 64px;
+    }
+
+    @include desktop-md {
+      font-size: 72px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -2%;
+  }
+
+  &__image {
+    width: 286px;
+    height: auto;
+
+    @include tablet {
+      width: 485px;
+    }
+
+    @include desktop-sm {
+      min-width: 528px;
+    }
+
+    @include desktop-md {
+      min-width: 582px;
+    }
+  }
+}

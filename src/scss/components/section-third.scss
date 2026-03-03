@@ -1,40 +1,30 @@
 @use '../utils/variables' as *;
 
-.section-second {
+.section-third {
   display: flex;
-  background-image: url('/src/assets/section-second/mobile-background.png');
-  background-position: 0px 30px;
-  background-repeat: no-repeat;
   background-color: $color-white;
   height: 815px;
   padding: 80px 16px;
 
   @include tablet {
-    background-image: url('/src/assets/section-second/tablet-background.png');
-    background-position: 0px 60px;
-    height: 1050px;
+    height: calc(790px + 240px);
     padding: 140px 20px 100px;
   }
 
   @include desktop-sm {
-    background-image: url('/src/assets/section-second/desktop-sm-background.png');
-    background-position: 0px 45px;
-    height: 640px;
-    padding: 140px 32px 100px;
+    height: calc(490px + 150px);
+    padding: 50px 32px 100px;
   }
 
   @include desktop-md {
-    background-image: url('/src/assets/section-second/desktop-md-background.png');
-    background-position: 0px 0px;
-    height: calc(450px + 240px);
+    height: calc(545px + 150px);
     justify-content: center;
   }
 
   @include desktop-lg {
-    background-image: url('/src/assets/section-second/desktop-lg-background.png');
-    background-position: 0px 260px;
-    height: 830px;
-    padding: 140px 220px;
+    align-items: center;
+    height: calc(660px + 210px);
+    padding: 100px 220px 110px;
   }
 
   &__container {
@@ -46,18 +36,23 @@
     align-items: center;
     height: 100%;
 
+    @include tablet {
+      gap: 100px;
+    }
+
     @include desktop-sm {
-      flex-direction: row;
+      flex-direction: row-reverse;
+      height: 540px;
       gap: 90px;
     }
 
     @include desktop-md {
-      height: 450px;
+      height: 100%;
     }
 
     @include desktop-lg {
       max-width: 1480px;
-      height: 550px;
+      height: 100%;
     }
   }
 
@@ -88,36 +83,39 @@
   }
 
   &__title {
+    height: 65px;
     font-weight: 700;
     font-size: 36px;
     line-height: 100%;
     padding-bottom: 24px;
-    background-image: url('/src/assets/section-second/mobile-text-background.png');
+    background-image: url('/src/assets/section-third/mobile-text-background.png');
     background-repeat: no-repeat;
-    background-position: 30px 58px;
+    background-position: 128px 16px;
 
     @include tablet {
+      height: 75px;
       font-size: 54px;
-      background-image: url('/src/assets/section-second/tablet-text-background.png');
-      background-position: 295px 40px;
+      background-image: url('/src/assets/section-third/tablet-text-background.png');
+      background-position: 330px 42px;
     }
 
     @include desktop-sm {
-      height: 155px;
+      height: calc(78px + 24px);
       font-size: 64px;
-      background-image: url('/src/assets/section-second/desktop-sm-text-background.png');
-      background-position: 190px 115px;
+      background-image: url('/src/assets/section-third/desktop-sm-text-background.png');
+      background-position: 190px 35px;
     }
 
     @include desktop-md {
-      height: 175px;
+      height: 88px;
       font-size: 72px;
-      background-image: url('/src/assets/section-second/desktop-md-text-background.png');
+      background-image: url('/src/assets/section-third/desktop-md-text-background.png');
       background-position: 0px 128px;
     }
 
     @include desktop-lg {
-      background-image: url('/src/assets/section-second/desktop-lg-text-background.png');
+      height: calc(88px + 24px);
+      background-image: url('/src/assets/section-third/desktop-lg-text-background.png');
     }
   }
 

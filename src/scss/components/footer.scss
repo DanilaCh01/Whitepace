@@ -1,0 +1,302 @@
+@use '../utils/variables' as *;
+
+.footer {
+  background-color: $color-dark-blue;
+  padding: 140px 0 32px 0;
+
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 80px;
+    padding: 0 16px;
+
+    @include tablet {
+      gap: 100px;
+      padding: 0 32px;
+    }
+
+    @include desktop-sm {
+      gap: 80px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @include tablet {
+      gap: 100px;
+    }
+
+    @include desktop-sm {
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 0;
+      width: 100%; // make it default if won't cause problems in other breakpoints (mobile, tablet)
+    }
+
+    @include desktop-md {
+      gap: 100px;
+      // justify-content: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include desktop-sm {
+      max-width: 240px;
+      gap: 15px;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+
+    @include tablet {
+      gap: 18px;
+    }
+
+    @include desktop-sm {
+      gap: 10px;
+    }
+
+    &-logo {
+      width: 38px;
+      height: 30px;
+
+      @include tablet {
+        width: 68px;
+        height: 54px;
+      }
+      @include desktop-sm {
+        width: 38px;
+        height: 30px;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $color-white;
+
+      @include tablet {
+        font-size: 52px;
+      }
+
+      @include desktop-sm {
+        font-size: 28px;
+      }
+    }
+
+    &-desc {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: -2%;
+      color: $color-ivory;
+      text-align: center;
+
+      @include desktop-sm {
+        text-align: left;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+
+    color: $color-white;
+
+    @include desktop-sm {
+      width: 44%;
+      flex-direction: row;
+      align-items: flex-start;
+      white-space: nowrap;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    @include desktop-md {
+      justify-content: flex-start;
+      gap: 100px;
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: -2%;
+      text-align: center;
+
+      @include desktop-sm {
+        text-align: left;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &-item {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: -2%;
+      text-align: center;
+
+      &:hover {
+        color: $color-yellow;
+      }
+
+      @include desktop-sm {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 24px;
+    max-width: 198px;
+
+    color: $color-white;
+    text-align: center;
+
+    @include desktop-sm {
+      align-items: flex-start;
+      text-align: start;
+      max-width: 260px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -2%;
+    }
+
+    &-desc {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: -2%;
+
+      @include desktop-sm {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    button {
+      @include tablet {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+      }
+
+      @include desktop-sm {
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    gap: 20px;
+
+    @include desktop-sm {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+
+      padding-top: 32px;
+      border-top: 1px solid #2e4e73;
+    }
+  }
+
+  &__legal-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2e4e73;
+
+    @include tablet {
+      gap: 0;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    @include desktop-sm {
+      gap: 60px;
+      flex-direction: row;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__legal-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -2%;
+
+    p {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 6px;
+    }
+  }
+
+  &__socials {
+    &-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+}

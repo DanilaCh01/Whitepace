@@ -1,3 +1,5 @@
+@use '../utils/variables' as *;
+
 :root {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,5 +14,22 @@ body {
 }
 
 .container {
-  max-width: calc(1440px - 32px);
+  width: 100%;
+  // max-width: calc(1440px - 32px);
+  max-width: 1440px;
+
+  @include desktop-lg {
+    max-width: 1480px !important;
+    padding: 0 !important;
+  }
+}
+
+header,
+section {
+  // outline: 1px solid #919191;
+  // Temporary outline for development, to be removed later
+}
+
+.hiden-sections {
+  // display: none;
 }

@@ -1,5 +1,6 @@
 $color-blue: #4f9cf9;
 $color-white: #ffffff;
+$color-ivory: #f7f7ee;
 $color-yellow: #ffe492;
 $color-dark-blue: #043873;
 $color-black: #212529;
@@ -29,3 +30,41 @@ $desktop-lg: 1920px;
     @content;
   }
 }
+
+// -- for fast copy and paste ---
+
+// @include tablet {
+//     }
+
+//     @include desktop-sm {
+//     }
+
+//     @include desktop-md {
+//     }
+
+//     @include desktop-lg {
+//     }
+
+// <div class="swiper-slide">
+//                 <div class="section-tenth__price-card price-card">
+//                   <div class="price-card__header">
+//                     <h3 class="price-card__title">Free</h3>
+//                     <p class="price-card__price">$0</p>
+//                     <p class="price-card__description">Capture ideas and find them quickly</p>
+//                   </div>
+
+//                   <ul class="price-card__features">
+//                     <li class="price-card__feature">Sync unlimited devices</li>
+//                     <li class="price-card__feature">10 GB monthly uploads</li>
+//                     <li class="price-card__feature">200 MB max. note size</li>
+//                     <li class="price-card__feature">
+//                       Customize Home dashboard and access extra widgets
+//                     </li>
+//                     <li class="price-card__feature">Connect primary Google Calendar account</li>
+//                     <li class="price-card__feature">
+//                       Add due dates, reminders, and notifications to your tasks
+//                     </li>
+//                   </ul>
+//                   <button class="btn btn--primary price-card__button">Get Started</button>
+//                 </div>
+//               </div>

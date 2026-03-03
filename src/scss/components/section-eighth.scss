@@ -1,0 +1,92 @@
+@use '../utils/variables' as *;
+
+.section-eighth {
+  padding: 80px 0;
+
+  @include tablet {
+    padding: 140px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 100px;
+
+    @include tablet {
+      padding: 0 20px;
+    }
+
+    @include desktop-sm {
+      padding: 0 32px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-align: center;
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include desktop-sm {
+      font-size: 64px;
+    }
+
+    @include desktop-md {
+      font-size: 72px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+
+    @include desktop-sm {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+  }
+
+  &__logo {
+    height: auto;
+
+    &--apple {
+      width: 56px;
+    }
+
+    &--microsoft {
+      width: 214px;
+
+      @include tablet {
+        width: 287px;
+      }
+    }
+
+    &--slack {
+      width: 192px;
+
+      @include tablet {
+        width: 280px;
+      }
+    }
+
+    &--google {
+      width: 140px;
+
+      @include tablet {
+        width: 211px;
+      }
+    }
+  }
+}

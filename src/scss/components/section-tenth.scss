@@ -1,0 +1,294 @@
+@use '../utils/variables' as *;
+
+.section-tenth {
+  display: flex;
+  justify-content: center;
+  background-color: $color-white;
+  padding: 80px 0;
+
+  @include tablet {
+    padding: 140px 0 90px;
+  }
+
+  @include desktop-lg {
+    padding: 140px 220px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: calc(1440px - 64px);
+    width: 100%;
+    align-items: center;
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    @include desktop-lg {
+      max-width: calc(1920px - 440px);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $color-black;
+    padding: 0px 20px;
+
+    @include desktop-sm {
+      padding: 0px 32px;
+    }
+
+    @include desktop-lg {
+      padding: 0px, 220px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 48px; //gap: 24px; --removed for background image spacing--
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    background-image: url('/src/assets/section-tenth/mobile-text-background.svg');
+    background-repeat: no-repeat;
+    background-position: 40px 122px;
+
+    @include tablet {
+      padding: 0;
+      font-size: 54px;
+    }
+
+    @include desktop-sm {
+      font-size: 64px;
+    }
+
+    @include desktop-md {
+      font-size: 72px;
+    }
+  }
+
+  &__user-board {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  max-width: 340px;
+
+  background-color: $color-blue;
+  padding: 20px 16px;
+  border-radius: 10px;
+  color: $color-white;
+  border: none;
+
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease,
+    box-shadow 0.6s ease,
+    transform 0.6s ease;
+
+  @include tablet {
+    max-width: none;
+
+    padding: 20px;
+  }
+
+  @include desktop-md {
+    min-width: none; // fgdlkfmglkdfmgkldfmglkdmfg
+    padding: 60px 40px;
+  }
+
+  &__review {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__pfp {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__quote {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -2%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: fit-content;
+    gap: 8px; // Відхід від дизайну за своїм розсудом. У дизайні відступу нема.
+
+    @include tablet {
+      align-self: flex-start;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -2%;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -2%;
+  }
+
+  &__rating-list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  &__rating-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -2%;
+  }
+}
+
+.swiper-pagination {
+  position: static !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include desktop-sm {
+    display: none;
+  }
+}
+
+.section-tenth__user-board {
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: $color-blue;
+    opacity: 1 !important;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      bottom: -12px;
+      left: -12px;
+      right: -12px;
+      cursor: pointer;
+      // background: rgba(255, 0, 0, 0.2); // pagination-bullets' hitbox visualization, remove later
+    }
+
+    &-active {
+      background-color: $color-dark-blue;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    padding: 50px 16px;
+
+    @include tablet {
+    }
+
+    @include desktop-sm {
+    }
+
+    &-active {
+      .user-card {
+        box-shadow: 10px 10px 50px 0px #00000014;
+        background-color: $color-white;
+        color: $color-black;
+      }
+    }
+
+    &__desktop-only {
+      display: none;
+
+      @include desktop-sm {
+        display: block;
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include desktop-sm {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.review-navigation {
+  display: none;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 10px;
+  padding: 20px 0; // for buttons' shadow
+
+  @include desktop-sm {
+    display: flex;
+  }
+
+  img {
+    width: 15px;
+    height: 30px;
+  }
+
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+    background-color: #dcecfe;
+    border: none;
+    cursor: pointer;
+
+    transition: box-shadow 0.3s ease;
+    transition: border-color 0.5s ease;
+
+    &:hover {
+      border: 1px solid $color-blue;
+      box-shadow: 1px 1px 20px 0px $color-blue;
+    }
+
+    :active {
+      transform: scale(0.9);
+    }
+  }
+}

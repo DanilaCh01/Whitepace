@@ -4,17 +4,10 @@
   display: flex;
   justify-content: center;
   background-color: $color-white;
-  height: 56px;
   padding: 16px;
-  border: 1px solid #e0e0e0;
 
   @include tablet {
-    height: 66px;
     padding: 16px 32px;
-  }
-
-  @include desktop-sm {
-    height: 92px;
   }
 
   @include desktop-lg {
@@ -33,23 +26,29 @@
 
   &__container {
     display: flex;
-    max-width: calc(1440px - 32px);
+    max-width: calc(1440px - 64px);
     width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @include desktop-lg {
+      max-width: calc(1920px - 440px);
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
-    gap: 14px;
+    @include desktop-sm {
+      gap: 15px;
+    }
   }
 
   &__wrapper-second {
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 80px;
   }
 
   &__logo {
@@ -57,20 +56,18 @@
     align-items: center;
     gap: 8px;
     color: $color-blue;
-    width: 134px;
 
     @include tablet {
-      width: 191px;
     }
   }
 
   &__logotype {
-    width: 25.95px;
-    height: 20.35px;
+    width: 25px;
+    height: 20px;
 
     @include tablet {
-      width: 37px;
-      height: 29px;
+      width: 35px;
+      height: 28px;
     }
   }
 
@@ -78,7 +75,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     line-height: 100%;
-    font-size: 19.64px;
+    font-size: 20px;
 
     @include tablet {
       font-size: 28px;
@@ -113,8 +110,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    width: 42px;
-    height: 26px;
+    padding: 4px;
 
     @include desktop-md {
       display: none;

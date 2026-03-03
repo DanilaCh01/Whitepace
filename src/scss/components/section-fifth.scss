@@ -1,0 +1,264 @@
+@use '../utils/variables' as *;
+
+.section-fifth {
+  display: flex;
+  justify-content: center;
+  background-color: $color-white;
+  padding: 80px 0;
+
+  @include tablet {
+    padding: 140px 0 90px;
+  }
+
+  @include desktop-lg {
+    padding: 140px 220px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: calc(1440px - 64px);
+    width: 100%;
+    align-items: center;
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    @include desktop-lg {
+      max-width: calc(1920px - 440px);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $color-black;
+    padding: 0px 16px;
+
+    @include desktop-sm {
+      padding: 0px 32px;
+    }
+
+    @include desktop-lg {
+      padding: 0px, 220px;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    padding-bottom: 24px; //gap: 24px; --removed for background image spacing--
+    letter-spacing: -2%;
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include desktop-sm {
+      font-size: 64px;
+    }
+
+    @include desktop-md {
+      font-size: 72px;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+
+    @include tablet {
+      font-weight: 500;
+      letter-spacing: 0%;
+    }
+
+    @include desktop-sm {
+      font-weight: 700;
+      letter-spacing: -2%;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -2%;
+  }
+
+  &__price-board {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  background-color: $color-white;
+  padding: 20px;
+  border-radius: 10px;
+
+  border: $color-yellow 1px solid;
+  color: $color-black;
+  fill: $color-black;
+
+  max-width: 470px;
+
+  @include tablet {
+    padding: 40px 44px;
+    max-width: none;
+  }
+
+  &--featured {
+    border: none;
+    box-shadow: 0px 4px 50px 0px #00000014;
+    color: $color-dark-blue;
+
+    @include tablet {
+      padding: 80px 44px;
+    }
+
+    .price-card__button {
+      background-color: $color-blue;
+      color: $color-white;
+      border: none;
+    }
+
+    .price-card__feature {
+      @include desktop-sm {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    // letter-spacing: -2%;
+    letter-spacing: -5%;
+    //--fix the non-active cards' size, so that they would be even, but it would make the text look a bit worse--
+
+    @include desktop-sm {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__feature {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -2%;
+
+    padding-left: 38px;
+    background-image: url('/src/assets/section-fifth/feature-list-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  &__button {
+    color: $color-black;
+    background-color: $color-white;
+    border: 1px solid $color-yellow;
+    width: fit-content;
+    padding: 16px 40px;
+    gap: 0px;
+  }
+}
+
+.swiper-pagination {
+  position: static !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 12px;
+}
+
+.section-fifth__price-board {
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: $color-blue;
+    opacity: 1 !important;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      bottom: -12px;
+      left: -12px;
+      right: -12px;
+      cursor: pointer;
+      // background: rgba(255, 0, 0, 0.2); // pagination-bullets' hitbox visualization, remove later
+    }
+
+    &-active {
+      background-color: $color-dark-blue;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    padding: 50px 16px;
+
+    @include tablet {
+    }
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include desktop-sm {
+      justify-content: flex-start;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@use '../utils/variables' as *;
+
+.section-sixth {
+  display: flex;
+  justify-content: center;
+  background-color: $color-dark-blue;
+  padding: 100px 0;
+  color: $color-white;
+
+  @include tablet {
+    padding: 140px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(1440px - 64px);
+    width: 100%;
+    align-items: center;
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 144px 0 20px;
+    }
+
+    @include desktop-sm {
+      padding: 0 470px 0 32px;
+    }
+
+    @include desktop-md {
+      padding: 0 32px;
+    }
+
+    @include desktop-lg {
+      max-width: calc(1920px - 440px);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    gap: 60px;
+
+    @include desktop-sm {
+    }
+
+    @include desktop-md {
+      align-items: center;
+      text-align: center;
+    }
+
+    @include desktop-lg {
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    // gap: 24px; --removed for background image spacing--
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    padding-bottom: 24px; //gap: 24px; --removed for background image spacing--
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include desktop-sm {
+      font-size: 64px;
+    }
+
+    @include desktop-md {
+      font-size: 72px;
+    }
+
+    &-span {
+      background-image: url('/src/assets/section-sixth/mobile-text-background.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0px 16px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -2%;
+    @include tablet {
+    }
+
+    @include desktop-sm {
+      text-align: center;
+    }
+
+    @include desktop-md {
+    }
+
+    @include desktop-lg {
+    }
+  }
+
+  button {
+    letter-spacing: -2%;
+
+    @include tablet {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+    }
+
+    @include desktop-sm {
+      line-height: 23px;
+    }
+  }
+}

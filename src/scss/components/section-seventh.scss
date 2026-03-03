@@ -1,0 +1,109 @@
+@use '../utils/variables' as *;
+
+.section-seventh {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    padding: 140px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 20px;
+    }
+
+    @include desktop-sm {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 0;
+      padding: 0 32px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+
+    @include desktop-sm {
+      align-items: flex-start;
+      text-align: left;
+      max-width: 526px;
+    }
+
+    button {
+      @include tablet {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+      }
+
+      @include desktop-sm {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0%;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    white-space: nowrap;
+
+    padding-bottom: 24px; //gap: 24px; --removed for background image spacing--
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include desktop-sm {
+      font-size: 64px;
+    }
+
+    @include desktop-md {
+      font-size: 72px;
+    }
+
+    span {
+      background-image: url();
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -2%;
+  }
+
+  &__image {
+    width: 290px;
+    height: auto;
+
+    @include tablet {
+      width: 513px;
+    }
+
+    @include desktop-sm {
+      width: 562px;
+    }
+
+    @include desktop-md {
+      width: 681px;
+    }
+  }
+}
