@@ -74,7 +74,7 @@ const review = new Swiper('.review', {
     1440: {
       slidesPerView: 2.93,
       spaceBetween: 0,
-      initialSlide: 1,
+      initialSlide: 2,
       enabled: true,
       centeredSlides: true,
       pagination: {
@@ -87,7 +87,7 @@ const review = new Swiper('.review', {
     1920: {
       slidesPerView: 3,
       spaceBetween: 0,
-      initialSlide: 1,
+      initialSlide: 2,
       enabled: true,
       centeredSlides: true,
       pagination: {
