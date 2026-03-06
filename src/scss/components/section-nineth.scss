@@ -6,19 +6,18 @@
   background-color: $color-dark-blue;
   color: $color-white;
 
-
   &:before {
     content: '';
     position: absolute;
     background-image: url('/src/assets/section-nineth/mobile-section-background.svg');
-  background-repeat: no-repeat;
-  background-position: 0px -70px;
+    background-repeat: no-repeat;
+    background-position: 0px -70px;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     opacity: 0.3;
-    // z-index: -1;
+    pointer-events: none;
   }
 
   @include tablet {

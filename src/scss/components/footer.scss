@@ -172,6 +172,7 @@
       line-height: 30px;
       letter-spacing: -2%;
       text-align: center;
+      transition: color 0.3s ease;
 
       &:hover {
         color: $color-yellow;
@@ -281,6 +282,15 @@
     line-height: 20px;
     letter-spacing: -2%;
 
+    &:not(:first-child):not(:last-child) {
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+
     p {
       display: flex;
       justify-content: center;
@@ -297,6 +307,17 @@
       align-items: center;
       justify-content: center;
       gap: 32px;
+    }
+
+    &-item {
+      &:hover {
+        img {
+          transform: translateY(-2px);
+        }
+      }
+      img {
+        transition: transform 0.3s ease;
+      }
     }
   }
 }

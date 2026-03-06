@@ -1,0 +1,23 @@
+:root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Inter';
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1480px !important;
+    padding: 0 !important;
+  }
+} /*# sourceMappingURL=base.css.map */

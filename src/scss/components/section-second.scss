@@ -2,7 +2,7 @@
 
 .section-second {
   display: flex;
-  background-image: url('/src/assets/section-second/mobile-background.png');
+  background-image: url('/src/assets/section-second/mobile-background.svg');
   background-position: 0px 30px;
   background-repeat: no-repeat;
   background-color: $color-white;
@@ -10,28 +10,28 @@
   padding: 80px 16px;
 
   @include tablet {
-    background-image: url('/src/assets/section-second/tablet-background.png');
+    background-image: url('/src/assets/section-second/tablet-background.svg');
     background-position: 0px 60px;
     height: 1050px;
     padding: 140px 20px 100px;
   }
 
   @include desktop-sm {
-    background-image: url('/src/assets/section-second/desktop-sm-background.png');
+    background-image: url('/src/assets/section-second/desktop-sm-background.svg');
     background-position: 0px 45px;
     height: 640px;
     padding: 140px 32px 100px;
   }
 
   @include desktop-md {
-    background-image: url('/src/assets/section-second/desktop-md-background.png');
+    background-image: url('/src/assets/section-second/desktop-md-background.svg');
     background-position: 0px 0px;
     height: calc(450px + 240px);
     justify-content: center;
   }
 
   @include desktop-lg {
-    background-image: url('/src/assets/section-second/desktop-lg-background.png');
+    background-image: url('/src/assets/section-second/desktop-lg-background.svg');
     background-position: 0px 260px;
     height: 830px;
     padding: 140px 220px;
@@ -91,33 +91,54 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 100%;
-    padding-bottom: 24px;
-    background-image: url('/src/assets/section-second/mobile-text-background.png');
-    background-repeat: no-repeat;
-    background-position: 30px 58px;
+    margin-bottom: 24px;
+    // padding-bottom: 24px;
+    // background-image: url('/src/assets/section-second/mobile-text-background.png');
+    // background-repeat: no-repeat;
+    // background-position: 30px 58px;
 
     @include tablet {
       font-size: 54px;
-      background-image: url('/src/assets/section-second/tablet-text-background.png');
-      background-position: 295px 40px;
     }
 
     @include desktop-sm {
-      height: 155px;
+      // height: 155px;
       font-size: 64px;
-      background-image: url('/src/assets/section-second/desktop-sm-text-background.png');
-      background-position: 190px 115px;
     }
 
     @include desktop-md {
-      height: 175px;
+      // height: 175px;
       font-size: 72px;
-      background-image: url('/src/assets/section-second/desktop-md-text-background.png');
-      background-position: 0px 128px;
     }
 
-    @include desktop-lg {
-      background-image: url('/src/assets/section-second/desktop-lg-text-background.png');
+    span {
+      padding-bottom: 24px;
+
+      background-image: url('/src/assets/section-second/mobile-text-background.svg');
+      background-repeat: no-repeat;
+      background-position: 2px 26px;
+
+      @include tablet {
+        background-image: url('/src/assets/section-second/tablet-text-background.svg');
+        background-position: 0px 45px;
+      }
+
+      @include desktop-sm {
+        padding-right: 15px;
+        background-image: url('/src/assets/section-second/desktop-sm-text-background.svg');
+        background-position: 195px 58px;
+      }
+
+      @include desktop-md {
+        padding-right: 45px;
+        background-image: url('/src/assets/section-second/desktop-md-text-background.svg');
+        background-position: 0px 63px;
+      }
+
+      @include desktop-lg {
+        background-image: url('/src/assets/section-second/desktop-lg-text-background.svg');
+        background-position: 0px 30px;
+      }
     }
   }
 
@@ -136,13 +157,13 @@
       font-weight: 500;
       line-height: 100%;
       size: 16px;
-      height: 60px;
+      // height: 60px;
     }
 
     @include desktop-sm {
       line-height: 24px;
       size: 18px;
-      height: 65px;
+      // height: 65px;
     }
   }
 }

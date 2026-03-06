@@ -1,18 +1,11 @@
 @use '../utils/variables' as *;
+@use 'sass:color';
 
 .header {
   display: flex;
   justify-content: center;
   background-color: $color-white;
-  padding: 16px;
-
-  @include tablet {
-    padding: 16px 32px;
-  }
-
-  @include desktop-lg {
-    padding: 16px 220px;
-  }
+  padding: 16px 0;
 
   &__btn {
     display: none;
@@ -26,14 +19,18 @@
 
   &__container {
     display: flex;
-    max-width: calc(1440px - 64px);
     width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 32px;
+    }
 
     @include desktop-lg {
-      max-width: calc(1920px - 440px);
+      padding: 0 220px;
     }
   }
 
@@ -101,6 +98,69 @@
     color: $color-blue;
   }
 
+  .nav__item {
+    position: relative;
+
+    &:hover {
+      .nav__submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav__arrow {
+        transform: translateY(2px);
+        // opacity: 1;
+        // visibility: visible;
+        // transform: translateY(0px);
+      }
+    }
+
+    .nav__arrow {
+      transform: translateY(0px);
+      // transform: translateY(-3px);
+      // opacity: 0;
+      // visibility: hidden;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .nav__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: $color-white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 4px;
+    z-index: 100;
+
+    opacity: 0;
+    outline: 1px solid #0039ff1c;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    li {
+      width: 100%;
+
+      a {
+        display: block;
+        padding: 10px 5px;
+        text-align: center;
+        color: $color-blue;
+        font-size: 14px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: rgba($color-blue, 0.05);
+        }
+      }
+    }
+  }
+
   .nav__link {
     display: flex;
     gap: 10px;
@@ -127,6 +187,12 @@
 
   &__btn {
     display: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: color.adjust($color-yellow, $lightness: -10%);
+      transform: translateY(-2px);
+    }
 
     @include desktop-sm {
       display: inline-block;
